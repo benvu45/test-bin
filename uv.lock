@@ -1,0 +1,19 @@
+version = 1
+revision = 3
+requires-python = ">=3.14"
+
+[[package]]
+name = "testbin"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "testlib" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "testlib", editable = "../test-lib" }]
+
+[[package]]
+name = "testlib"
+version = "0.1.0"
+source = { editable = "../test-lib" }
